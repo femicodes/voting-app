@@ -15,9 +15,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    pusher.trigger('my-channel', 'my-event', {
-        "message": "hello world"
+    pusher.trigger('os-poll', 'os-vote', {
+        points: 1,
+        os: req.body.os
       });
+
+      return res.json({success: true, message: 'Thank you for voting'})
 });
 
 module.exports = router;
