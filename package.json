@@ -1,0 +1,20 @@
+{
+  "name": "voting-poll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "eslint": "^5.9.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "pusher": "^2.1.4"
+  }
+}
