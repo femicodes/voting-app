@@ -18,6 +18,15 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 });
 
+fetch('http://localhost:4000/poll') 
+.then(res => res.json())
+.then(data => {
+    const votes = data.votes;
+    const totalVotes = votes.length;
+
+    const vote
+});
+
 let dataPoints = [
     { label: 'Windows', y: 0 },
     { label: 'MacOS', y: 0 },
@@ -37,13 +46,11 @@ if (chartContainer) {
         data: [
             {
                 type: 'column',
-                dataPoints
+                dataPoints: dataPoints
             }
         ]
     });
     chart.render();
-
-    Pusher.logToConsole = true;
 
     var pusher = new Pusher('abc1dc4967f29e73c2d4', {
       cluster: 'eu',
