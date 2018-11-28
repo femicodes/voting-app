@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const port = process.env.PORT || 4000;
 
 require('./config/db');
 
@@ -16,8 +17,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(cors());
 
-app.use('/poll', poll)
-
-const port = 4000;
+app.use('/poll', poll);
 
 app.listen(port, () => console.log(`server started on port ${port}`));
